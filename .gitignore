@@ -1,0 +1,9 @@
+# Python
+*/__pycache__/*
+
+# Visual Studio
+*.vscode
+
+#pytest 
+*.pytest_cache
+*.pyc
