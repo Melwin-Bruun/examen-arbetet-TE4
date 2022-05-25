@@ -19,12 +19,14 @@ def value_of_card(card):
     :param card: str - given card.
     :return: int - value of a given card (J, Q, K = 10, 'A' = 1) numerical value otherwise.
     """
+    
     if card in ('K', 'Q', 'J'):
         res = 10
     elif card == 'A':
         res = 1
     else:
         res = int(card)
+    BuiltIn().log_to_console(f"Input {card} , Output {res}")
     return res
     
 
@@ -36,10 +38,13 @@ def higher_card(card_one, card_two):
     """
 
     if (value_of_card(card_one) < value_of_card(card_two)):
+        BuiltIn().log_to_console(f"Input {card_one} and {card_two}, Output {card_two}")
         return card_two
     elif value_of_card(card_one) > value_of_card(card_two):
+        BuiltIn().log_to_console(f"Input {card_one} and {card_two}, Output {card_one}")
         return card_one
     else:
+        BuiltIn().log_to_console(f"Input {card_one} and {card_two}, Output {card_two , card_one}")
         return card_one , card_two
 
 
@@ -55,9 +60,11 @@ def value_of_ace(card_one, card_two):
 
     if value_one + value_two <= 21 - 11:
         value_ace = 11
+        BuiltIn().log_to_console(f" Output value of ace {value_ace}")
         return value_ace
     elif value_one + value_two > 21 - 11:
         value_ace = 1
+        BuiltIn().log_to_console(f"Output value of ace {value_ace}")
         return value_ace
 
 

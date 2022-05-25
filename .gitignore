@@ -7,3 +7,7 @@
 #pytest 
 *.pytest_cache
 *.pyc
+
+#robot framework 
+*.html
+*.xml

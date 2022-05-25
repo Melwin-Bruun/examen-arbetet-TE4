@@ -17,11 +17,14 @@ def add_me_to_the_queue(express_queue, normal_queue, ticket_type, person_name):
     :param person_name: str - name of person to add to a queue.
     :return: list - the (updated) queue the name was added to.
     """
+    BuiltIn().log_to_console(f"Input {express_queue} , {normal_queue},{ticket_type} {person_name}")
     if ticket_type == 1 : 
         express_queue.append(person_name)
+        BuiltIn().log_to_console(f" Output: express {express_queue}")
         return express_queue 
     else: 
         normal_queue.append(person_name)
+        BuiltIn().log_to_console(f" Output: normal {normal_queue}")
         return normal_queue
     
 
